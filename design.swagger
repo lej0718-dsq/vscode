@@ -1,0 +1,67 @@
+openapi: '3.0.3'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+paths:
+  /test:
+    get:
+      responses:
+        '200':
+          description: OK
+
+    post:
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: OK          
+tags:
+  - name: test
+    description: Test operations
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    X-Request-Id:
+      name: X-Request-ID
+      in: header
+      description: Optional request identifier
+      required: false
+      schema:
+        type: string
+
+  schemas:
+    TestResponse:
+      type: object
+      properties:
+        message:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+      required:
+        - message
+
+  responses:
+    TestOK:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TestResponse'
+
+security:
+  - bearerAuth: []
+
+externalDocs:
+  description: API documentation
+  url: https://example.com/docs
+
+
