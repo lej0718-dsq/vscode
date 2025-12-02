@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>User - vscode</title>
+	<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+	<main class="container">
+		<h2>User endpoint</h2>
+
+		<section class="card">
+			<h3>GET (쿼리)</h3>
+			<form id="getForm" action="/user" method="get">
+				<label>name: <input name="name" type="text" /></label>
+				<button type="submit">Send GET</button>
+			</form>
+			<div id="getResult" class="result"></div>
+		</section>
+
+		<section class="card">
+			<h3>POST (form)</h3>
+			<form id="postForm" method="post" action="/user" enctype="application/x-www-form-urlencoded">
+				<label>name: <input name="name" type="text" /></label>
+				<button type="submit">Send POST (AJAX)</button>
+			</form>
+			<div id="postResult" class="result"></div>
+		</section>
+
+		<p><a href="/hello.html">Back</a></p>
+	</main>
+	<script src="/js/app.js"></script>
+</body>
+</html>
