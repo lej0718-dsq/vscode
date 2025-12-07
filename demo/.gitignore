@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# ensure history.md is tracked even if *.md is ignored
+!history.md

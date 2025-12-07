@@ -5,6 +5,7 @@
 	--accent: #2b6cb0;
 }
 
+/* Bootstrap과 조화되도록 컨테이너 기본 배경 유지 */
 body {
 	margin: 0;
 	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -28,12 +29,12 @@ body {
 	text-decoration: none;
 }
 
+/* card 클래스가 Bootstrap과 겹치므로 별도 클래스 유지(사용중인 .card 섹션에는 추가 패딩만) */
 .card {
 	background: var(--card);
 	padding: 1rem;
 	border-radius: 8px;
 	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-	width: 320px;
 }
 
 .result {
@@ -44,6 +45,7 @@ body {
 	white-space: pre-wrap;
 }
 
+/* h1 greeting 스타일 조정 (Bootstrap과 충돌 최소화) */
 h1#greeting {
 	font-size: 2rem;
 	color: var(--accent);
